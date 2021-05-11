@@ -2,13 +2,14 @@
 @import 'variables';
 
 body {
-    background: hotpink;
+    margin: 0;
 
     nav {
-        background: indianred;
+        background: $lightGrey;
         height: 60px;
         @include center;
         gap: 2rem;
+        padding: 0 2rem;
 
         img {
             margin-right: auto;
@@ -33,18 +34,85 @@ body {
     }
 
     header {
-        background: khaki;
-        height: 300px;
+        @include center;
+        flex-direction: column;
+        background: $lightGrey;
 
+        p {
+            max-width: 30rem;
+        }
+
+        h1 {
+            margin: 5rem 0 1rem 0;
+        }
+
+        aside {
+            margin: 2rem 0;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                background: #000;
+                color: white;
+                margin: .5rem;
+                padding: .5rem .75rem;
+                text-decoration: none;
+                border-radius: $radius;
+
+                img {
+                    margin-right: .25rem;
+                }
+            }
+        }
     }
 
     main {
-        background: lawngreen;
-        height: 600px;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1rem;
+        padding: 0 0 5rem 0;
+
+        h1 {
+            grid-column: auto / span 4;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        article {
+            background: $middleGrey;
+            height: 20rem;
+            @include center;
+            flex-direction: column;
+
+            img {
+                margin: auto 0;
+            }
+
+            h3 {
+                margin: 0;
+            }
+        }
+
+        section {
+            grid-column: auto / span 2;
+            background: $darkGrey;
+            height: 20rem;
+            @include center;
+            flex-direction: column;
+            color: white;
+
+            h2 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+        }
+
     }
 
     footer {
-        background: lightcoral;
-        height: 200px;
+        background: $darkGrey;
+        height: 300px;
     }
 }

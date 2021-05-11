@@ -8,7 +8,10 @@
 /* VARIABLES */
 $opacityLevel: 0.6;
 $fontSizeSML: .8rem;
+
 $darkGrey: #333;
+$middleGrey: #999;
+$lightGrey: #eee;
 
 $radius: 4px;
 
@@ -26,5 +29,17 @@ button {
     &:hover {
         background: $darkGrey;
         color: white;
+        cursor: pointer;
+    }
+
+    &.invert {
+        border-color: $lightGrey;
+        color: $lightGrey;
+
+        &:hover {
+            background: $lightGrey;
+            color: $darkGrey;
+            cursor: pointer;
+        }
     }
 }
