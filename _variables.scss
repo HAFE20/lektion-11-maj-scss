@@ -1,0 +1,30 @@
+/* MIXINS */
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* VARIABLES */
+$opacityLevel: 0.6;
+$fontSizeSML: .8rem;
+$darkGrey: #333;
+
+$radius: 4px;
+
+/* COMPONENTS */
+button {
+    appearance: none;
+    background: none;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: 1px solid $darkGrey;
+    color: $darkGrey;
+    text-transform: uppercase;
+    border-radius: $radius;
+
+    &:hover {
+        background: $darkGrey;
+        color: white;
+    }
+}

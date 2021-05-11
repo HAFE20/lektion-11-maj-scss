@@ -1,0 +1,50 @@
+@import 'typography';
+@import 'variables';
+
+body {
+    background: hotpink;
+
+    nav {
+        background: indianred;
+        height: 60px;
+        @include center;
+        gap: 2rem;
+
+        img {
+            margin-right: auto;
+        }
+
+        button {
+            margin-left: auto;
+        }
+
+        a {
+            text-transform: uppercase;
+            opacity: $opacityLevel;
+            color: black;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: $fontSizeSML;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    header {
+        background: khaki;
+        height: 300px;
+
+    }
+
+    main {
+        background: lawngreen;
+        height: 600px;
+    }
+
+    footer {
+        background: lightcoral;
+        height: 200px;
+    }
+}
